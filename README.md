@@ -5,9 +5,9 @@ GuatemalaJS ORG Site
 
 ### Prerrequisites
 1. The site is created with <a href="https://gohugo.io">Hugo Static Web Site Engine</a> . Check the docs on how to install and create content.
-2. Clone the repository with the theme submodule 
+2. Clone the repository with the theme submodule
   ```
-    git clone --recursive git@github.com:guatemalajs/guatemalajs.org.git
+git clone --recursive git@github.com:guatemalajs/guatemalajs.org.git
   ```
 
 

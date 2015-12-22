@@ -1,13 +1,29 @@
-<link rel="import"
-      href="/bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="/bower_components/github-card/github-card.html">
+<link rel="import" href="/bower_components/iron-flex-layout/iron-flex-layout.html">
 
-<script>
-  // register a new element called proto-element
-  Polymer({
-    is: "gjs-github-user-list",
-    // add a callback to the element's prototype
-    ready: function() {
-      this.textContent = "I'm a proto-element. Check out my prototype!"
+<dom-module id="gjs-github-user-list">
+  <style>
+    .container {
+     @apply(--layout-horizontal);
+     @apply(--layout-around-justified);
+     @apply(--layout-wrap);
+
     }
-  });
-</script>
+  </style>
+  <template>
+    <iron-ajax auto handle-as="json" url="https://api.github.com/orgs/guatemalajs/public_members?client_id=652a8f4b0b2a7f029035&&client_secret=b9f8030fe42f39de6db1577a5ddb6564d79fb8ad" last-response="{{users}}">
+    </iron-ajax>
+    <div class="container">
+      <template  is="dom-repeat" items="[[users]]">
+          <github-card user=[[item.login]]></github-card>
+      </template>
+    </div>
+  </template>
+  <script>
+    Polymer({
+      is: "gjs-github-user-list"
+    });
+  </script>
+</dom-module>

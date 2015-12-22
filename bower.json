@@ -18,7 +18,11 @@
     "tests"
   ],
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.2.0"
+    "polymer": "Polymer/polymer#^1.2.0",
+    "iron-ajax": "PolymerElements/iron-ajax#~1.1.1",
+    "paper-card": "PolymerElements/paper-card#~1.0.8",
+    "iron-flex-layout": "PolymerElements/iron-flex-layout#~1.2.2",
+    "github-card": "~0.2.1"
   },
   "resolutions": {
     "polymer": "^1.2.0"

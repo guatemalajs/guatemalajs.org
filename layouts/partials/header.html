@@ -10,7 +10,7 @@
 
   <!--- Web Components--->
   <link rel="import" href="{{.Site.BaseURL}}/components/gjs-github-user-list/gjs-github-user-list.html">
-  
+
   <style type="text/css">
   {{if .Site.Params.footerCover}}
     footer.page-footer{background-image: url({{.Site.BaseURL}}/{{.Site.Params.footerCover}});}
@@ -18,6 +18,9 @@
     footer.page-footer{background-image: url({{.Site.BaseURL}}/images/default.png);}
   {{end}}
   </style>
+
+  <!-- Web Components polyfill-->
+  <script src="{{.Site.BaseURL}}/bower_components/webcomponentsjs/webcomponents.min.js"></script>
 </head>
 <body>
   <ul id="slide-out" class="side-nav">

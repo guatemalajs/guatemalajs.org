@@ -10,10 +10,11 @@
 
   <!--- Web Components--->
   <link rel="import" href="{{.Site.BaseURL}}/components/gjs-github-user-list/gjs-github-user-list.html">
+  <link rel="import" href="{{.Site.BaseURL}}/components/gjs-facebook-feed/gjs-facebook-feed.html">
 
   <style type="text/css">
   {{if .Site.Params.footerCover}}
-    footer.page-footer{background-image: url({{.Site.BaseURL}}/{{.Site.Params.footerCover}});}
+    footer.page-footer{bac  kground-image: url({{.Site.BaseURL}}/{{.Site.Params.footerCover}});}
   {{else}}
     footer.page-footer{background-image: url({{.Site.BaseURL}}/images/default.png);}
   {{end}}
@@ -23,6 +24,14 @@
   <script src="{{.Site.BaseURL}}/bower_components/webcomponentsjs/webcomponents.min.js"></script>
 </head>
 <body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.5&appId=1676143372666478";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
   <ul id="slide-out" class="side-nav">
     <li><a href="{{.Site.BaseURL}}"><i class="mdi-action-home left"></i>Home<i class="mdi-hardware-keyboard-arrow-right right"></i></a></li>
     <li><a href="{{.Site.BaseURL}}/categories"><i class="mdi-action-perm-media left"></i>Categories<i class="mdi-hardware-keyboard-arrow-right right"></i></a></li>
